@@ -103,7 +103,7 @@ Em **fuso-horário** escolha o fuso horário de onde você mora ou preferir (ex:
 
 **Caso tenha ficado confuso ou queira ver isso de uma forma mais rápida e sem explicações, veja o vídeo abaixo onde eu instalo pelo archinstall:**
 
-[[Themes](../assets/image23.png)](https://youtu.be/zf8ke7ghJvg)
+[![Themes](../assets/image23.png)](https://youtu.be/zf8ke7ghJvg)
 
 
 ## Por fim, aperte em INSTALAR.
