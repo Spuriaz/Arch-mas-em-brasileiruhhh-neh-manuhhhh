@@ -1,0 +1,119 @@
+//  ______        _   ______   _       _     
+// |  ____|      | | |  ____| | |     | |    
+// | |__ __ _ ___| |_| |__ ___| |_ ___| |__  
+// |  __/ _` / __| __|  __/ _ \ __/ __| '_ \ 
+// | | | (_| \__ \ |_| | |  __/ || (__| | | |
+// |_|  \__,_|___/\__|_|  \___|\__\___|_| |_|
+                                           
+// Este é o arquivo de configuração do FastFetch. Vou dar uma explicação rápida dos elementos abaixos:
+// Logo: É a logo do fastfetch (a imagem ou o desenho em caracteres que aparece).
+// Display: É o separador do nome das categorias e a categoria. Por exemplo: "OS : Arch Linux x86_64", o separador é o ":" entre "OS" e "Arch".
+// Modules:Ele guarda os modulos (as categorias), como OS, Kernel, CPU, GPU, etc. Nós temos duas separações de modules neste fastfetch: com a primeira sendo sistema e a segunda sendo hardware. Os modulos "custom" são modulos NOSSOS que neste caso estão sendo utilizados para criar as separações de software pra hardware.
+
+// Sobre a logo, você pode usar tanto imagem como arquivos de textos. Os arquivos de textos ficam dentro de (~/.config/fastfetch/texts), enquanto os de imagem ficam dentro de (~/.config/fastfetch/images). Para arquivos de imagem você deve deixar a logo com type: "kitty-direct" e source com o caminho para a imagem. Para arquivos de texto você deve deixar o type como "file", e em source colcoar o caminho do desenho em caracteres.
+
+// Você pode mudar as cores dos icones e do fastfetch em geral em "keys", dentro da categoria "display". Essa é o tipo de cor geral do fastfetch. Você pode colocar palavras (como red, blue), ou colocar um id de cor (por exemplo #4e5983). Lembre que não é aceito transparência, ou seja, não deve terminar com algo que indica transparência (como ff).
+
+{
+    "logo": {
+        "type": "kitty-direct",
+        "source": "/home/spuria/.config/fastfetch/images/quesera.png",
+        "width": 30,
+        "padding": {
+            "top": 2,
+            "right": 6
+        }
+    },
+    "display": {
+        "separator": " : ",
+        "color": {
+            // --- Alterar a cor de todos os ícones/chaves de uma vez
+            "keys": "#4e5983",
+            "output": "white"  // <--- Cor do texto da direita (as informações)
+        }
+    },
+    "modules": [
+        // --- Bloco 1: Sistema ---
+        {
+            "type": "host",
+            "key": "  󰊠",
+            "format": "I am ..."
+        },
+        {
+            "type": "custom",
+            "format": "╭───────────────────────────────────────────╮"
+        },
+        {
+            "type": "os",
+            "key": "  󰣇 OS"
+        },
+        {
+            "type": "kernel",
+            "key": "  󰘚 Kernel"
+        },
+        {
+            "type": "packages",
+            "key": "  󰏖 Packages"
+        },
+        {
+            "type": "display",
+            "key": "  󰍹 Display"
+        },
+        {
+            "type": "terminal",
+            "key": "  󰆍 Terminal"
+        },
+        {
+            "type": "wm",
+            "key": "  󱂬 WM"
+        },
+        {
+            "type": "custom",
+            "format": "╰───────────────────────────────────────────╯"
+        },
+        "break",
+
+        // --- Bloco 2: Hardware ---
+        {
+            "type": "users",
+            "key": "  ",
+            "format": "Spuria!"
+        },
+        {
+            "type": "custom",
+            "format": "╭───────────────────────────────────────────╮"
+        },
+        {
+            "type": "cpu",
+            "key": "  󰻠 CPU"
+        },
+        {
+            "type": "gpu",
+            "key": "  󰢮 GPU"
+        },
+        {
+            "type": "memory",
+            "key": "  󰍛 Memory"
+        },
+        {
+            "type": "command",
+            "key": "  󰅐 OS Age",
+            "text": "birth_install=$(stat -c %W /); echo $(( ($(date +%s) - $birth_install) / 86400 )) days"
+        },
+        {
+            "type": "uptime",
+            "key": "  󰅐 Uptime"
+        },
+        {
+            "type": "custom",
+            "format": "╰───────────────────────────────────────────╯"
+        },
+        "break",
+
+        // --- Color dots ---
+        {
+            "type": "custom",
+            "format": "  \u001b[37m● \u001b[38;5;250m● \u001b[38;5;245m● \u001b[90m● \u001b[38;5;240m● \u001b[38;5;235m●"
+        }
+    ]
+}

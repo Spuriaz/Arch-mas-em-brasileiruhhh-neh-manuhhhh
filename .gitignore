@@ -1,0 +1,27 @@
+# ===== LOGS / DATABASE =====
+*.log
+*.ldb
+*.sqlite
+*.sqlite3
+*.db
+*.old
+
+# Extension
+LOCK
+LOG
+CURRENT
+
+# ===== Python =====
+__pycache__/
+*.pyc
+
+# ===== System =====
+.DS_Store
+Thumbs.db
+
+# ===== Security =====
+.env
+
+# ===== Cache =====
+Cache/
+cache/

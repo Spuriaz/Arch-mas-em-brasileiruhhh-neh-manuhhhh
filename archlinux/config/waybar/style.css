@@ -1,0 +1,89 @@
+/* --- GERAL --- */
+* {
+  font-family: JetBrainsMono Nerd Font;
+}
+
+
+/* --- WAYBAR --- */
+window#waybar {
+  min-height: 30px; /* Tamanho da waybar*/
+  background: rgba(10, 15, 30, 0); /* Cor da waybar (vísivel/transparente */
+  border-radius: 14px; /* Borda */
+  padding: 0px 8px; /* Padding DENTRO da waybar */
+  margin: 3px;/* Distancia entre os itens dentro da waybar */
+  color: #e7e5e5; /*Cor dos textos da waybar*/
+  font-family: JetBrainsMono Nerd Font;
+}
+
+
+
+
+
+/* --- SETTINGS --- */
+
+/* Configuração DOS WORKSPACES */
+#workspaces {
+  margin: 0px 12px; /*Distância de um workspace pro outro*/
+}
+
+/* Configuração dos BOTÕES dos workspaces */
+#workspaces button {
+  all: unset;/* remove estilo padrão */
+  min-width: 30px; /*Largura*/
+  margin: 6px; /* Distância entre os workspaces (espaço exterior, modifica o tamanho*/
+  border-radius: 999px;
+  background: rgba(226, 226, 255, 0.611); /* Cor do background */
+  color: black; /* Cor dos números */
+  transition: all 0.25s ease;
+}
+
+/* Workspace atual */
+#workspaces button.active {
+  min-width: 45px; /* estica quando usado */
+  background: rgba(49, 66, 97, 0.926);
+}
+
+
+/* Configurações de tamanho dos módulos (todos) */
+#clock,
+#pulseaudio,
+#bluetooth,
+#network,
+#temperature,
+#custom-terminal,
+#custom-files,
+#custom-notifications,
+#custom-power,
+#custom-settings {
+  padding: 6px 8px; /*Tamanho dos itens (internamente)*/
+  font-size: 14px; /*Tamanho das fontes E DOS ICONES (altura da waybar)*/
+  background: transparent;
+}
+
+
+/* Configuração primeiros módulos da direita */
+#custom-terminal,
+#custom-files,
+#custom-notifications,
+#custom-power,
+#custom-menu,
+#custom-settings {
+  min-width: 34px; /* Largura dos módulos */
+  padding: 6px 0px; /* Controla a altura dos módulos (e da waybar) */
+  margin: 3px;
+  font-size: 15px; /* Tamanho da fonte */
+  background: transparent;
+  border-radius: 999px;
+}
+
+
+
+/* Hover dos primeiros módulos da direita*/
+#custom-terminal:hover,
+#custom-files:hover,
+#custom-notifications:hover,
+#custom-power:hover,
+#custom-settings:hover,
+#custom-menu:hover {
+  color: rgba(148, 168, 205, 0.926);
+}

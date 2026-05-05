@@ -1,0 +1,74 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    bg:            rgba(31, 35, 48, 0.81);
+    bg-alt:        #161925;
+    fg:            #cdd6f4;
+    selected:      #56609Dff;
+    border:        #56609Dff;
+    urgent:        rgb(255, 0, 0);
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "JetBrainsMono Nerd Font 11, Noto Color Emoji 12";
+}
+
+/* --- JANELA --- */
+window {
+    transparency: "real"; /*Transparência ativada (é agora é possível colocar itens com cor transparente)*/
+    location: center; /*Localização da janela*/
+    anchor: center; /*Localização da janela (fixada)*/
+    width: 420px; /*Largura da janela*/
+    border: 2px; /*Espessura da borda*/
+    border-color: @border; /*Cor da borda*/
+    border-radius: 14px; /*Borda*/
+    background-color: @bg; /*Cor do background da janela*/
+}
+
+/* --- MAINBOX --- */
+/* É a "janela" dentro da janela real, é o "campo" em que os emojis estão */
+mainbox {
+    padding: 10px;
+}
+
+/* --- BARRA DE PESQUISA --- */
+inputbar {
+    children: [prompt, entry];
+    spacing: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: @bg-alt;
+}
+
+/* --- ENTRADA DA BARRA DE PESQUISA --- */
+entry {
+    placeholder: "Search";
+}
+
+/* --- COLUNAS DOS EMOJIS --- */
+listview {
+    columns: 1; /* Colunas dos emojis (deixe em 1, é melhor) */
+    spacing: 10px; /* Espaço entre os emojis*/
+    padding: 5px; /* Padding dos itens da janela com a borda (mais padding: borda mais longe)*/
+
+    lines: 10; /* 10 emojis visíveis de uma vez, é necessário usar scroll para ver os outros */
+}
+
+/* --- ELEMENTOS (CADA EMOJI) --- */
+element {
+    transparent: true;
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* --- EMOJI SELECIONADO --- */
+element selected {
+    background-color: @selected; /* É o emoji selecionado tem a cor da variavel @selected, definida no topo deste arquivo */
+    text-color: #1e1e2e;
+}
+
+/* --- BUGS --- */
+/* Essa linha tira um bug onde aparecia o título "emoji" antes do inputbar. Pode ignorar essa parte */
+prompt {
+    enabled: false;
+}

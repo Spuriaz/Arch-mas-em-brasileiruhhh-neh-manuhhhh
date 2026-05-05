@@ -1,0 +1,115 @@
+{
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "modules-left": ["clock", "pulseaudio"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["custom/terminal", "custom/settings", "custom/files", "custom/notifications", "custom/menu", "custom/separator", "bluetooth", "network", "temperature", "custom/power"],
+
+
+
+
+  "clock": {
+    "format": "  {:%H:%M}",
+    "tooltip": false
+  },
+
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+
+
+
+
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": false,
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+
+
+
+
+
+
+  "custom/terminal": {
+    "format": "",
+    "on-click": "kitty",
+    "tooltip-format": "Terminal"
+  },
+
+
+  "custom/settings": {
+    "format": "",
+    "tooltip-format": "Settings",
+    "on-click": "kitty -e code ~/.config/hypr/hyprland.conf"
+  },
+
+
+  "custom/files": {
+    "format": "",
+    "on-click": "dolphin",
+    "tooltip-format": "Files"
+  },
+
+
+  "custom/notifications": {
+    "format": "",
+    "on-click": "dunstctl set-paused toggle",
+    "tooltip-format": "Notifications"
+  },
+
+
+  "custom/menu": {
+    "format": "󰍜",
+    "on-click": "~/.config/waybar/scripts/clear_cliphist.sh",
+    "tooltip-format": "Clear Cliphist"
+  },
+
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " Connected",
+    "format-disconnected": " Bluetooth",
+    "format-on": " on",
+    "format-off": " off",
+    "on-click": "blueman-manager",
+    "tooltip-format": "Bluetooth"
+  },
+
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "󰤭",
+    "on-click": "~/.config/waybar/scripts/network-menu.sh",
+    "tooltip-format": "Network"
+  },
+
+
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+    "format": "  {temperatureC}°C",
+    "tooltip": true
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh",
+    "tooltip-format": "Power menu"
+  }
+}

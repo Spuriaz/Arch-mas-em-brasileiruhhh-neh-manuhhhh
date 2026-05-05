@@ -1,0 +1,79 @@
+@import url("https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css");
+
+/* Tags do BlackBox (user-tags) */
+@import url('https://monstrousdev.github.io/themes/addons/user-tags.css');
+
+/* Barra de título estilo Windows antigo — remova este @import se quiser a barra padrão */
+@import url("https://gibbu.github.io/BetterDiscord-Themes/addons/windows-titlebar.css");
+
+:root {
+  /* Variáveis da imagem de fundo */
+  
+  /* Imagem principal de fundo | A URL DEVE SER DIRETA (terminando em .jpg, .jpeg, .png, .gif) */
+  --background-image: url('https://i.imgur.com/huKNuUD.png');
+  
+  /* --- OUTROS WALLPAPERS DISPONÍVEIS ---
+  https://i.imgur.com/msKl9HL.png - Flores azuis
+  https://i.imgur.com/huKNuUD.png - Reze
+  https://i.imgur.com/JLhnW32.png - Girassol
+  https://i.imgur.com/rJGe5Sj.jpeg - Caveira
+  https://i.imgur.com/LliVkKn.jpeg - Musashi 1 (branco)
+  https://i.imgur.com/FL8O3ee.jpeg - Musashi 2 (branco e preto)
+  https://i.imgur.com/lrRiP7W.jpeg - Telefone na Natureza
+  https://i.imgur.com/p0Pl0vs.jpeg - Núvens laranjas
+  https://i.imgur.com/eADtthU.jpeg - Space Girl
+  https://i.imgur.com/UCkfW5f.jpeg - Black Mountain
+  https://i.imgur.com/YTmAbes.png - Green Eyes Girl
+  https://i.imgur.com/cSo4OGX.png - Stuff Girl
+  https://i.imgur.com/l5B1ri7.png - Frutinger */
+
+  /* --- OUTROS WALLPAPERS EM FORMATO GIF!!! ---
+  https://i.imgur.com/Chd0LXE.gif - Stuff Girl Animado
+  https://i.imgur.com/yrfuY6K.gif - Tokyo Cartoonesco */
+
+  --background-image-blur: 5px; /* Intensidade do desfoque da imagem de fundo | Deve terminar em px | PADRÃO: 5px */
+  --background-image-size: cover; /* Tamanho da imagem de fundo | PADRÃO: cover | OPÇÕES: cover, contain */
+  --background-image-position: center; /* Posição da imagem de fundo | PADRÃO: center | OPÇÕES: top, right, bottom, left, center */
+
+  /* Variáveis de pop-ups e modais */
+  --popout-modal-image: var(--background-image); /* Imagem de fundo para pop-ups e modais | A URL DEVE SER DIRETA */
+  --popout-modal-blur: 5px; /* Intensidade do desfoque dos pop-ups/modais | Deve terminar em px | PADRÃO: 5px */
+  --popout-modal-size: cover; /* Tamanho da imagem nos pop-ups/modais | PADRÃO: cover | OPÇÕES: cover, contain */
+  --popout-modal-position: center; /* Posição da imagem nos pop-ups/modais | PADRÃO: center */
+
+  /* Variáveis da imagem do botão Home */
+  --home-button-image: url('https://gibbu.github.io/BetterDiscord-Themes/FrostedGlass/assets/discord.svg'); /* Imagem do botão Home | A URL DEVE SER DIRETA */
+  --home-button-size: cover; /* Tamanho da imagem do botão Home | PADRÃO: cover */
+  --home-button-position: center; /* Posição da imagem do botão Home | PADRÃO: center */
+
+  /* Variáveis de brilho */
+  --serverlist-brightness: 0.8; /* Brilho da lista de servidores | 0 - 1 (decimais permitidos) | PADRÃO: 0.8 */
+  --left-brightness: 0.8; /* Brilho da lista de canais e DMs | 0 - 1 | PADRÃO: 0.8 */
+  --middle-brightness: 0.6; /* Brilho do chat | 0 - 1 | PADRÃO: 0.6 */
+  --right-brightness: 0; /* Brilho da lista de membros e “Now Playing” | 0 - 1 | PADRÃO: 0 */
+  --popout-modal-brightness: 0.75; /* Brilho dos pop-ups e modais | 0 - 1 | PADRÃO: 0.75 */
+
+  /* Variáveis de gradiente */
+  --gradient-primary: 103,58,183; /* Cor primária do gradiente | PADRÃO: 103,58,183 */
+  --gradient-secondary: 63,81,181; /* Cor secundária do gradiente | PADRÃO: 63,81,181 */
+  --gradient-direction: 320deg; /* Direção do gradiente | PADRÃO: 320deg */
+
+  /* Variáveis de tonalização (tint) */
+  --tint-colour: 255,51,159; /* Cor da tonalização aplicada | PADRÃO: 255,51,159 */
+  --tint-brightness: 0; /* Intensidade/brilho da tonalização | 0 - 1 | PADRÃO: 0 */
+
+  /* Outras variáveis */
+  --window-padding: 0px; /* Espaçamento ao redor da janela do Discord | PADRÃO: 20px */
+  --window-roundness: 0px; /* Arredondamento das bordas do Discord | PADRÃO: 10px */
+  --scrollbar-colour: rgba(255,255,255,0.05); /* Cor da barra de rolagem | PADRÃO: rgba(255,255,255,0.05) */
+  --link-colour: #00b0f4; /* Cor dos links | PADRÃO: #00b0f4 */
+
+  /*
+    Visite https://fonts.google.com e escolha uma fonte que você goste.
+    Depois, siga este tutorial: https://imgur.com/a/CNbw7xC
+  */
+  --font: 'Whitney';
+
+  /* Não mexa */
+  --update-notice-1: none;
+}

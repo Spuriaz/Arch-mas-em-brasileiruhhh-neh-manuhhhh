@@ -1,0 +1,73 @@
+* {
+    /* Cores - Estilo Dark Moderno */
+    bg: #11111bbc;
+    bg-alt: #1e1e2e;
+    fg: #cdd6f4;
+    accent: #89b4fa;
+    border-col: #313244;
+    
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+}
+
+window {
+    width: 600px;
+    background-color: @bg;
+    border: 2px;
+    border-color: @border-col;
+    border-radius: 12px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    padding: 10px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 0 0 10px 0;
+}
+
+prompt {
+    background-color: @accent;
+    text-color: @bg;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px 0 0;
+    enabled: true;
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: #585b70;
+    vertical-align: 0.5;
+}
+
+listview {
+    lines: 10;
+    columns: 1;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px;
+    spacing: 10px;
+    border-radius: 6px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+
