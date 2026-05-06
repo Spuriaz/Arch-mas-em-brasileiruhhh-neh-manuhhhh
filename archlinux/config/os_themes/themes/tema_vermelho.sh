@@ -13,6 +13,7 @@ PATH_THEMES_MENU="$HOME/.config/os_themes/selector/style.rasi"
 PATH_KITTY="$HOME/.config/kitty/kitty.conf"
 PATH_DUNST="$HOME/.config/dunst/dunstrc"
 PATH_SDDM="/usr/share/sddm/themes/silent/configs/spuria.conf"
+PATH_HYPRLOCK="$HOME/.config/hypr/hyprlock.conf"
 
 
 # --- VARIÁVEIS ---
@@ -102,6 +103,15 @@ WALL_DO_TEMA="naturalfemeal.png"
 BG_SDDM="ken.mp4"
 
 
+# Hyprlock
+LOCK_ICON="~/Profiles/blairson.jpg"
+LOCK_BG="~/Wallpapers/anotherblur.jpg"
+LOCK_ICON_BORDER="rgb(191, 65, 65)"
+LOCK_SONG_COLOR="rgb(191, 65, 65)"
+LOCK_MINUTES_COR="rgb(191, 65, 65)"
+LOCK_BLUR="1"
+
+
 
 
 # --- SCRIPT ---
@@ -175,11 +185,20 @@ sed -i "s/frame_color = .*/frame_color = \"$DUNST_BORDER\"/g" "$PATH_DUNST"
 
 
 # Awww Wallpapers
-~/.config/os_themes/swww/set_wallpaper.sh "$WALL_DO_TEMA" # Dentro deste arquivo temos a variável "WALL_NOME" que tem $1 dentro. Esse $1 é como um pedido de um valor, e passamos o valor dentro de "WALL_DO_TEMA" ao chamar o script.
+~/.config/os_themes/awww/set_wallpaper.sh "$WALL_DO_TEMA" # Dentro deste arquivo temos a variável "WALL_NOME" que tem $1 dentro. Esse $1 é como um pedido de um valor, e passamos o valor dentro de "WALL_DO_TEMA" ao chamar o script.
 
 
 # SDDM
 sed -i "s|background = .*|background = \"$BG_SDDM\"|g" "$PATH_SDDM"
+
+
+# Hyprlock
+sed -i "/# --- Background ---/,/}/ s|path = .*|path = $LOCK_BG|g" "$PATH_HYPRLOCK" # wallpaper
+sed -i "/# --- Foto de perfil ---/,/}/ s/border_color = .*/border_color = $LOCK_ICON_BORDER/g" "$PATH_HYPRLOCK" # borda da foto
+sed -i "/# --- Foto de perfil ---/,/}/ s|path = .*|path = $LOCK_ICON|g" "$PATH_HYPRLOCK" # foto de perfil
+sed -i "/# --- Minutos ---/,/}/ s/color = .*/color = $LOCK_MINUTES_COR/g" "$PATH_HYPRLOCK" # cor dos minutos
+sed -i "/# --- Música tocando ---/,/}/ s/color = .*/color = $LOCK_SONG_COLOR/g" "$PATH_HYPRLOCK" # cor da música
+sed -i "/# --- Background ---/,/}/ s|blur_passes = .*|blur_passes = $LOCK_BLUR|g" "$PATH_HYPRLOCK"
 
 
 
