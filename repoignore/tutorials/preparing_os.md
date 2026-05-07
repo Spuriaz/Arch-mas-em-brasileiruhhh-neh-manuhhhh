@@ -126,6 +126,12 @@ Você também deve adicionar os pluggins que eu uso para que funcione. Relaxe, �
 
  ```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions```
 
+Sobre a COR do nome de usuário, o @ e o nome do pc, você pode alterar elas indo no arquivo ```~/.oh-my-zsh/themes/gnzh.zsh-theme```. Esse é o tema que estamos utilizando no zsh. Lá você verá algo  mais ou menos assim:
+
+![Image](../assets/image24.png)
+
+Você pode alterar as linhas que contem uma cor dentro de chaves, como a ```PR_USER='$F{white5}%n%f'```. Você pode botar o nome  da cor que quiser. Não só cores mas também pode customizar por exemplo o icone de local host, etc. Caso você queira ficar com a configuração igual a minha e esteja com preguiça de trocar as cores manualmente, você pode copiar o que está dentro do arquivo e colar no tema do zsh. O arquivo estará em ```archlinux/home/oh-my-zsh/gnzh.zsh-theme``` no repositório/pasta e você deve colocá-lo dentro de ```~/.oh-my-zsh/themes/gnzh.zsh-theme```.  
+
  Após fazer a alteração do tema e instalar os pluggins, basta você "atualizar" o zsh utilizando o comando ```source ~/.zshrc```.
 
 Caso você não perceba diferença no shell, as vezes depois de alterar o terminal para zsh e oh-my-zsh ele tenha reescrito o arquivo .zshrc que eu fiz. Basta você ir novamente no github, copiar o código do arquivo ~/.zshrc e colar dentro do arquivo no seu pc. Por fim, seu terminal deve estár com essa aparência:
