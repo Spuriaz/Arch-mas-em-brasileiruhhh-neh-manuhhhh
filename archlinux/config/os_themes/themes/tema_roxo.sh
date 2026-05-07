@@ -96,7 +96,7 @@ DUNST_BORDER="#ad92c4"
 
 
 # Awww Wallpapers
-WALL_DO_TEMA="spacegirl.png"
+WALL_DO_TEMA="luffybirthday.webp"
 
 
 # SDDM
