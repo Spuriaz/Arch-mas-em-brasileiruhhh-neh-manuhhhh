@@ -153,4 +153,4 @@ Como dito anteriormente se você teve atenção, o yay é um aur helper, ou seja
 
 Por fim, agora apenas ative tudo que for necessário (bluetooth, etc) com o comando abaixo:
 
-```systemctl enable --now NetworkManager, bluetooth, pipewire, seatd```
+```systemctl enable --now NetworkManager, bluetooth, pipewire, seatd, sddm```

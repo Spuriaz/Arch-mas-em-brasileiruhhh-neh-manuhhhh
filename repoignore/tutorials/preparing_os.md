@@ -12,7 +12,7 @@ Ainda na pasta home, cole tudo que estiver no diretório home do repositório de
 
 ## Sddm
 
-O sddm é a tela de login personalizada do PC (que também muda com a troca de temas). Você deve copiar a pasta "themes" e o arquivo "EXPLICACAO.MD" dentro do diretório sddm do repositório git, ir para este local: ```/usr/share/sddm``` e colar eles lá. O arquivo EXPLICACAO.md é uma explicação em português do Brasil sobre como funciona o sddm e como utilizá-lo.
+O sddm é a tela de login personalizada do PC (que também muda com a troca de temas). Você deve copiar a pasta "themes" e o arquivo "EXPLICACAO.MD" dentro do diretório sddm do repositório git, ir para este local: ```/usr/share/sddm``` e colar eles lá. O arquivo EXPLICACAO.md é uma explicação em português do Brasil sobre como funciona o sddm e como utilizá-lo. Para o SDDM funcionar você precisa ativá-lo (caso já não tenha feito isso seguindo os passos do howinstall.md). Para isso, rode o comando ```sudo systemctl enable --now sddm```. Mesmo com seu SDDM já funcionando, ele não vai estar personalizado. Para deixarmos personalizado, você deve mexer em um **arquivo de configuração do SDDM** onde você pode indicar o tema desejado, etc. Esse arquivo fica em ```/etc/sddm.conf```. Eu também já vou deixar a minha configuração (já personalizada e que troca com o tema) dentro de ```archlinux/sddm/put_on_etc/sddm.conf```.
 
 ## Grub (ao ligar o PC)
 
