@@ -25,6 +25,10 @@ Procure pela linha ""GRUB_THEME="/boot/grub/themes/nome-do-tema/theme.txt" e col
 
 E por fim atualize o grub, alterando de forma definitiva o tema (sem esse comando o grub não entende que deve "atualizar" seu arquivo de configuração): ```sudo grub-mkconfig -o /boot/grub/grub.cfg```.
 
+## Dual Boot (GRUB)
+
+Se você estiver fazendo um dual boot (mais de um sistema no disco), você deve mostrar pro grub a onde estão os arquivos de inicialização. Nós fazemos isso usando o pacote ```os-prober```. Para isso, instale-o usando o comando ```sudo pacman -S os-prober``` (ou você pode usar um aur helper) e, em seguida, você vai utilizar esse pacote para escanear os discos rígidos. Quando ele encontrar uma pasta de um sistema, como Windows, ele vai avisar ao grub para colocar no menu de dual boot. Para isso, antes garanta que o arquivo ```/etc/default/grub``` tenha a linha ```GRUB_DISABLE_OS_PROBER=false```. O grub por padrão vem com o rastreador desativado por motivos de segurança, agora ativando esse rastreador ("disable os prober/desativar os proble", como falso, ou seja, o rastreador ativado) ele tem permissão para escanear. Por fim, rode o comando ```sudo grub-mkconfig -o /boot/grub/grub.cfg```. Esse comando primeiro procura sistemas e depois refaz o arquivo do grub (grub.cfg), com o novo "cardápio" de itens no menu. Se aparecer algo como  **"Found Windows Boot Manager on /dev/sda1@/EFI/Microsoft/Boot/bootmgfw.efi"**,  o Windows foi encontrado e já está no menu de boot.
+
 ## Keyd
 
 Keyd é um manipulador de teclas (keys) do teclado. Como eu uso um teclado 75% em inglês mas tenho costume com layout ABNT-2 (brasileiro), eu uso o Keyd para mudar as teclas e deixar de forma que eu tenho costume. Se você não preferir esse formato, pode apenas ignorar ou até mudar para um formato que você prefira.
